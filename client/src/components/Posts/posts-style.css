@@ -1,0 +1,12 @@
+.main-container {
+    display: flex;
+    align-items: center;
+}
+
+.sm-margin{
+    margin: 8px;
+}
+
+.active-div {
+    text-align: center;
+}
