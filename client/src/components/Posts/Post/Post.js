@@ -14,7 +14,7 @@ const Post = ({post, setCurrentId}) => {
                 <Typography variant='body2'>{moment(post.createdAt).fromNow()}</Typography>
             </div>
             <div className='overlay-2'>
-                <Button style={{color: 'white'}} size='small' onClick={() => {setCurrentId(post._id)}}>
+                <Button className='button' style={{color: 'white'}} size='small' onClick={() => {setCurrentId(post._id)}}>
                     <MoreHoriz fontSize='default' />
                 </Button>
             </div>
