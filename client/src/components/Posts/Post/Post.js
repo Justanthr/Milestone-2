@@ -5,7 +5,7 @@ import {ThumbUpAlt, Delete, MoreHoriz} from '@mui/icons-material'
 import moment from 'moment'
 import {useDispatch} from 'react-redux'
 
-import {deletePost} from '../../../actions/posts.js'
+import {deletePost, likePost} from '../../../actions/posts.js'
 
 
 const Post = ({post, setCurrentId}) => {
@@ -30,7 +30,7 @@ const Post = ({post, setCurrentId}) => {
             <Typography className='title' variant='h5' gutterBottom>{post.message}</Typography>
             </CardContent>
             <CardActions className='card-action'>
-                <Button size='small' color='primary' onClick={() => {}}>
+                <Button size='small' color='primary' onClick={() => dispatch(likePost(post._id))}>
                     <ThumbUpAlt fontSize='small' />
                     Like
                     {post.likeCount}
