@@ -27,12 +27,13 @@ const Post = ({post, setCurrentId}) => {
             <Typography variant='body2' color='textSecondary'>{post.tags.map((tag) => `#${tag} `)}</Typography>
             </div>
             <CardContent>
-            <Typography className='title' variant='h5' gutterBottom>{post.message}</Typography>
+            <Typography className='title' variant='h5' gutterBottom>{post.title}</Typography>
             </CardContent>
+            <Typography className='title' variant='body2' color='textSecondary' component='p'>{post.message}</Typography>
             <CardActions className='card-action'>
                 <Button size='small' color='primary' onClick={() => dispatch(likePost(post._id))}>
                     <ThumbUpAlt fontSize='small' />
-                    Like
+                    &nbsp; Like &nbsp;
                     {post.likeCount}
                 </Button>
                 <Button size='small' color='primary' onClick={() => dispatch(deletePost(post._id))}>
